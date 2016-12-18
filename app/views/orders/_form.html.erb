@@ -1,0 +1,52 @@
+<%= form_for(@order) do |f| %>
+  <% if @order.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@order.errors.count, "error") %> prohibited this order from being saved:</h2>
+
+      <ul>
+      <% @order.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+    <%= f.fields_for :order_details, @order_details do |ff| %>
+      <table>
+        <thead>
+          <td class="column-title">Product ID</td>
+          <td class="column-title">Product</td>
+          <td class="column-title">Comment</td>
+          <td class="column-title">Quantity</td>
+          <td class="column-title">Sub Total</td>
+        </thead>
+        <tbody id="table-body">
+          
+        </tbody>
+      </table>
+    <% end %>
+
+  
+  
+
+  <div class="field">
+    <%= f.label :client %><br>
+    <%= f.text_field :client %>
+  </div>
+  <div class="field">
+    <%= f.label :payment_method %><br>
+    <%= f.text_field :payment_method %>
+  </div>
+  <div class="field">
+    <%= f.label :total %><br>
+    <%= f.number_field :total %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
+
+
+
+

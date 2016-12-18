@@ -1,0 +1,65 @@
+<p id="notice"><%= notice %></p>
+
+<div>
+	<h2>Order Details</h2>
+		<table class="show-table">
+        <thead>
+          <td class="column-title">Product</td>
+          <td class="column-title">Comment</td>
+          <td class="column-title">Quantity</td>
+          <td class="column-title">Sub Total</td>
+          <td class="column-title">detalles</td>
+        </thead>
+    
+        <tbody id="table-body">
+    	<% @order_details.each do |order_detail| %>
+    		<tr>
+	        	<td><%= order_detail.product.name %></td>
+	        	<% if order_detail.comments.length > 0 %>
+	        	<td><%= order_detail.comments %></td>
+	        	<% else %>
+	        	<td><p>-----</p></td>
+	        	<% end %>
+	        	<td><%= order_detail.quantity %></td>
+	        	<td><%= order_detail.sub_total %></td>
+	        	<td><% order_detail.product.consumptions.each do |consumes| %>
+	        			<%= consumes.supply_id %>
+	        			<%= consumes.consumption %>
+					<% end %>
+	        	</td>
+        	</tr>
+        <% end %>	
+        </tbody>
+      </table>
+</div>
+
+<div>
+	<h2>General</h2>
+	<p>
+	  <strong>Client:</strong>
+	  <%= @order.client %>
+	</p>
+
+	<p>
+	  <strong>Payment method:</strong>
+	  <%= @order.payment_method %>
+	</p>
+
+	<p>
+	  <strong>Total:</strong>
+	  <%= @order.total %>
+	</p>	
+</div>
+<%= form_tag update_supplies_orders_path, method: :put do %>
+	<% @order_details.each do |order_detail| %>
+		<% order_detail.product.consumptions.each do |consumes| %>
+			<%= number_field_tag "supplies_ids[]", consumes.supply_id %>
+			<%= number_field_tag "new_stock_amount[]", Supply.where(id: consumes.supply_id).first.stock - consumes.consumption %>
+		<% end %>
+	<% end %>
+	<%= submit_tag %>
+<% end %>
+
+
+<%= link_to 'Edit', edit_order_path(@order) %> |
+<%= link_to 'Back', orders_path %>

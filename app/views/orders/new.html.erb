@@ -1,0 +1,23 @@
+<h1>New Order</h1>
+
+<% @categories.each do |category| %>
+	<div>
+	<button class="category-buttons" id="<%= category.name %>"><%= category.name %></button>
+
+	</div>
+<% end %>
+
+<div id="products-screen">
+	<% Product.all.each do |p| %>
+		<div class="products-hidden <%= p.category.name %>">
+			<p><%= p.name %></p>
+			<span id="<%= p.name.split(' ').join('-') + '-price' %>" hidden><%= p.price %></span>
+			<input class="checkboxes" type="checkbox" id='<%= p.name.split(' ').join('-') %>' >
+			<span class="product-id"><%= p.id %></span>
+		</div>
+	<% end %>
+</div>
+
+<%= render 'form' %>
+
+<%= link_to 'Back', orders_path %>

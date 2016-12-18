@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Product:</strong>
+  <%= @consumption.product_id %>
+</p>
+
+<p>
+  <strong>Supply:</strong>
+  <%= @consumption.supply_id %>
+</p>
+
+<p>
+  <strong>Consumption:</strong>
+  <%= @consumption.consumption %>
+</p>
+
+<%= link_to 'Edit', edit_consumption_path(@consumption) %> |
+<%= link_to 'Back', consumptions_path %>
