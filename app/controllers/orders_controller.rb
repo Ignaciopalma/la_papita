@@ -18,6 +18,19 @@ class OrdersController < ApplicationController
   # GET /orders/1.json
   def show
     @order_details = @order.order_details
+    @total_consumption = {}
+
+    @order_details.each do |order_detail|
+      qty = order_detail.quantity
+      order_detail.product.consumptions.each do |consumes|
+        if @total_consumption[consumes.supply_id]
+          @total_consumption[consumes.supply_id] += consumes.consumption * qty
+        else 
+          @total_consumption[consumes.supply_id] = consumes.consumption * qty
+        end
+      end
+    end
+    
   end
 
   # GET /orders/new

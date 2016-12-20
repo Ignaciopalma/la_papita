@@ -14,6 +14,8 @@ gem 'bourbon'
 gem 'neat'
 gem 'active_model_serializers', '~> 0.10.0'
 gem 'responders', '~> 2.0'
+gem 'escpos'
+gem 'escpos-image' 
 
 group :development, :test do
   gem 'byebug'

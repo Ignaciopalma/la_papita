@@ -15,6 +15,7 @@
 //= require turbolinks
 //= require_tree .
 
+
 $(document).on('turbolinks:load', function(){
 	var categoryButtons = document.getElementsByClassName('category-buttons');
 	var checkBoxes = document.getElementsByClassName('products-hidden');
