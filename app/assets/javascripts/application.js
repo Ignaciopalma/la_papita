@@ -16,7 +16,7 @@
 //= require_tree .
 
 
-$(document).on('turbolinks:load', function(){
+$(document).on('ready turbolinks:load', function(){
 	var categoryButtons = document.getElementsByClassName('category-buttons');
 	var checkBoxes = document.getElementsByClassName('products-hidden');
 	
@@ -33,7 +33,7 @@ $(document).on('turbolinks:load', function(){
 	});	
 });
 
-$(document).on('turbolinks:load', function(){
+$(document).on('ready turbolinks:load', function(){
 	var input = document.createElement('input');
   	var tableBody = document.getElementById('table-body');
   	var checkBoxes = document.getElementsByClassName('checkboxes');
@@ -151,46 +151,49 @@ $(document).on('turbolinks:load', function(){
   			createAndDeleteRow(checkbox);
   		});  		
   	})
+
+    console.log('page loaded down');
 });
 
 
-$(document).on('turbolinks:load', function(){
-	var addButton = document.getElementById('more');
-	var ingredientsDiv = document.getElementById('add-ingredients');
-	var selects = document.getElementsByClassName('ingredients-select');
-	var firstIngredientsSelect = document.getElementById('product_consumptions_attributes_0_supply_id');
-	
-	function checkAmountOfIngredientsRows(select) {
-	  	return selects.length;
-	}
+$(document).on('ready turbolinks:load', function(){
+  var addButton = document.getElementById('more');
+  var ingredientsDiv = document.getElementById('add-ingredients');
+  var selects = document.getElementsByClassName('ingredients-select');
+  var firstIngredientsSelect = document.getElementById('product_consumptions_attributes_0_supply_id');
+  
+  function checkAmountOfIngredientsRows(select) {
+      return selects.length;
+  }
 
-	function createConsumptionInput(index) {
-		var newInput = ingredientsDiv.appendChild(document.createElement('input'));
-		newInput.type = "number";
-		newInput.name = "product[consumptions_attributes][" + index + "][consumption]";
-		newInput.id= "product_consumptions_attributes_" + index + "_consumption";
-	}
+  function createConsumptionInput(index) {
+    var newInput = ingredientsDiv.appendChild(document.createElement('input'));
+    newInput.type = "number";
+    newInput.name = "product[consumptions_attributes][" + index + "][consumption]";
+    newInput.id= "product_consumptions_attributes_" + index + "_consumption";
+  }
 
-	function createSelect(index, innerSelect) {
-		var newSelect = ingredientsDiv.appendChild(document.createElement('select')); 
-  		newSelect.setAttribute('name', "product[consumptions_attributes][" + index + "][supply_id]");
-  		newSelect.setAttribute('type', 'text');
-  		newSelect.setAttribute('id', "product_consumptions_attributes_" + index + "_supply_id");
-  		newSelect.setAttribute('class', 'ingredients-select');
-  		newSelect.innerHTML = innerSelect;
-	}
+  function createSelect(index, innerSelect) {
+    var newSelect = ingredientsDiv.appendChild(document.createElement('select')); 
+      newSelect.setAttribute('name', "product[consumptions_attributes][" + index + "][supply_id]");
+      newSelect.setAttribute('type', 'text');
+      newSelect.setAttribute('id', "product_consumptions_attributes_" + index + "_supply_id");
+      newSelect.setAttribute('class', 'ingredients-select');
+      newSelect.innerHTML = innerSelect;
+  }
 
-  	function createIngredientsRow() {
-  		var selects = document.getElementsByClassName('ingredients-select');
-		var index = checkAmountOfIngredientsRows(selects)
-	  	var innerSelect = firstIngredientsSelect.innerHTML;
-	  	createSelect(index, innerSelect);
-	  	createConsumptionInput(index);
-  	}
+  function createIngredientsRow() {
+    console.log('createIngredientsRow function')
+    var selects = document.getElementsByClassName('ingredients-select');
+    var index = checkAmountOfIngredientsRows(selects)
+    var innerSelect = firstIngredientsSelect.innerHTML;
+    createSelect(index, innerSelect);
+    createConsumptionInput(index);
+  }
 
-  	addButton.addEventListener('click', function() {
-  		createIngredientsRow();
-  	})
+  addButton.addEventListener('click', function() {
+    createIngredientsRow();
+  });
 });
 
 
