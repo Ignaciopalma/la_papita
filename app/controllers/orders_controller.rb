@@ -35,7 +35,6 @@ class OrdersController < ApplicationController
 
   # GET /orders/new
   def new
-    
     @categories = Category.all
     @products = Product.all
     @order = Order.new
@@ -102,6 +101,6 @@ class OrdersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def order_params
-      params.require(:order).permit(:client, :detail, :payment_method, :total, order_details_attributes: [:order_id, :product, :comments, :quantity, :sub_total, :product_id], supplies_attributes: [:name, :stock, :id])
+      params.require(:order).permit(:client, :detail, :payment_method, :total, order_details_attributes: [:order_id, :comments, :quantity, :sub_total, :product_id], supplies_attributes: [:name, :stock, :id])
     end
 end

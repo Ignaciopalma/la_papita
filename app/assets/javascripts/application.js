@@ -31,20 +31,6 @@ $(document).on('turbolinks:load', function(){
 			});	
 		});
 	});	
-	
-	
-
-	
-	// Array.prototype.forEach.call(categoryButtons, function(button) {
-	// 	var checkBoxList = button.nextSibling.nextSibling;
-	// 	button.addEventListener('click', function(){
-	// 		if(checkBoxList.style.display == "") {
-	// 			checkBoxList.style.display = 'block';	
-	// 		} else {
-	// 			checkBoxList.style.display = "";	
-	// 		}
-	// 	});
-	// });
 });
 
 $(document).on('turbolinks:load', function(){
@@ -68,11 +54,11 @@ $(document).on('turbolinks:load', function(){
   	}
 
   	function orderCommentFunc(row, index) {
-  		var inner = '<input type="text" name="order[order_details_attributes][' + index + '][comments]" id="order_order_details_attributes_' + index + '_comments">';
+  		var inner = '<input type="text" name="order[order_details_attributes][' + index + '][comments]" class="comments-input" id="order_order_details_attributes_' + index + '_comments">';
   		return row.appendChild(document.createElement('td')).innerHTML = inner; 
   	}
 
-	function orderQuantityFunc(row, index) {
+	  function orderQuantityFunc(row, index) {
   		var inner = '<select class="selectOpt" type="text" name="order[order_details_attributes][' + index + '][quantity]" id="order_order_details_attributes_' + index + '_quantity">' +
   						'<option>1</option>' +
   						'<option>2</option>' +
@@ -102,9 +88,26 @@ $(document).on('turbolinks:load', function(){
   		})
   	}
 
+    var vueltoAmount = document.getElementById('vuelto-amount').innerText;
+    var calcularButton = document.getElementById('calcular-button');
+
+    function calculateVuelto() {
+      var total = parseInt(document.getElementById('order_total').value);
+      var paymentMethod = parseInt(document.getElementById('order_payment_method').value);
+      console.log('i am called');
+      if(isNaN(paymentMethod)) {
+        return 'No necesita Vuelto';
+      } else {
+        return paymentMethod - total;
+      }
+    }
+
+    function setVueltoAmount() {
+      document.getElementById('vuelto-amount').innerText = '$' + calculateVuelto();
+    }
+
   	function calculateTotal() {
   		var totalAmount = document.getElementById('order_total');
-
   		return totalAmount.value = Array.prototype.reduce.call(getSubTotalNumbers(), function(prev, eachSubTotal) {
   			return prev + eachSubTotal;
   		})
@@ -112,35 +115,41 @@ $(document).on('turbolinks:load', function(){
 
   	function createAndDeleteRow(checkbox) {
   		var index = checkAmountOfRows();
-		var subPrice = document.getElementById(checkbox.id + '-price').innerText;
-		var newRow = tableBody.appendChild(document.createElement('tr'));
+  		var subPrice = document.getElementById(checkbox.id + '-price').innerText;
+  		var newRow = tableBody.appendChild(document.createElement('tr'));
 
-		if(checkbox.checked === true) {
-			newRow.id = checkbox.id.split(' ').join('-') + '-row';
-			orderProductIdFunc(newRow, index, getId(checkbox));
-			orderProductFunc(newRow, index, checkbox.id);
-			orderCommentFunc(newRow, index); 
-			orderQuantityFunc(newRow, index);
-			orderSubTotalFunc(newRow, index, subPrice);
-		} else {
-			document.getElementById(checkbox.id.split(' ').join('-') + '-row').remove();
-		}
+  		if(checkbox.checked === true) {
+  			newRow.id = checkbox.id.split(' ').join('-') + '-row';
+  			orderProductIdFunc(newRow, index, getId(checkbox));
+  			orderProductFunc(newRow, index, checkbox.id);
+  			orderCommentFunc(newRow, index); 
+  			orderQuantityFunc(newRow, index);
+  			orderSubTotalFunc(newRow, index, subPrice);
+  		} else {
+  			document.getElementById(checkbox.id.split(' ').join('-') + '-row').remove();
+  		}
 
-		Array.prototype.forEach.call(selectOpt, function(select) {
-			var sub = select.parentNode.nextSibling.childNodes[0]
-			select.addEventListener('change', function() {
-				sub.value = parseInt(select.value) * parseInt(subPrice)
-				calculateTotal();
-			});
+  		Array.prototype.forEach.call(selectOpt, function(select) {
+  			var sub = select.parentNode.nextSibling.childNodes[0]
+  			select.addEventListener('change', function() {
+  				sub.value = parseInt(select.value) * parseInt(subPrice)
+  				calculateTotal();
+          setVueltoAmount();
+  			});
   		})
 
   		calculateTotal();
+      setVueltoAmount();
   	}
 
+    document.getElementById('order_payment_method').addEventListener('input', function() {
+      document.getElementById('vuelto-amount').innerText = calculateVuelto();
+    })
+
   	Array.prototype.forEach.call(checkBoxes, function(checkbox) {
-		checkbox.addEventListener('change', function() {
-			createAndDeleteRow(checkbox);
-		});  		
+  		checkbox.addEventListener('change', function() {
+  			createAndDeleteRow(checkbox);
+  		});  		
   	})
 });
 

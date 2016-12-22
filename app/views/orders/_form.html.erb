@@ -11,42 +11,50 @@
     </div>
   <% end %>
 
-    <%= f.fields_for :order_details, @order_details do |ff| %>
-      <table>
-        <thead>
-          <td class="column-title">Product ID</td>
-          <td class="column-title">Product</td>
-          <td class="column-title">Comment</td>
-          <td class="column-title">Quantity</td>
-          <td class="column-title">Sub Total</td>
-        </thead>
-        <tbody id="table-body">
-          
-        </tbody>
-      </table>
-    <% end %>
+  <div class="order-screen">
+      <%= f.fields_for :order_details, @order_details do |ff| %>
+      <div class="table-container">
+        <table>
+          <col width="130">
+          <thead>
+            <td class="column-title">ID</td>
+            <td class="column-title">Product</td>
+            <td class="column-title">Comment</td>
+            <td class="column-title">Quantity</td>
+            <td class="column-title">Sub Total</td>
+          </thead>
+          <tbody id="table-body">
+            
+          </tbody>
+        </table>
+      </div>
+      <% end %>
 
-  
-  
+    <div class="general-inputs">
+      <div class="field">
+        <%= f.label :cliente %><br>
+        <%= f.text_field :client %>
+      </div>
+      <div class="field">
+        <%= f.label :Medio_de_pago %><br>
+        <%#= f.select :payment_method, options_for_select(['Credito', 'Debito', '20000', '10000', '5000', '2000', '1000']) %>
+        <%= f.number_field :payment_method %>
 
-  <div class="field">
-    <%= f.label :client %><br>
-    <%= f.text_field :client %>
+      </div>
+      <div class="field">
+        <%= f.label :total %><br>
+        <%= f.number_field :total, :value => number_to_human(:delimiter => '.') %>
+      </div>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :payment_method %><br>
-    <%= f.text_field :payment_method %>
+
+  <div id="vuelto">
+    <span id="calcular-button">Vuelto</span>
+    <span id="vuelto-amount"></span>
   </div>
-  <div class="field">
-    <%= f.label :total %><br>
-    <%= f.number_field :total %>
-  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>
-<% end %>
-
-
-
-
+<% end %>  
 

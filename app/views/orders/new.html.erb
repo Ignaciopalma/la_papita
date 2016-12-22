@@ -1,23 +1,29 @@
-<h1>New Order</h1>
-
-<% @categories.each do |category| %>
-	<div>
-	<button class="category-buttons" id="<%= category.name %>"><%= category.name %></button>
-
-	</div>
-<% end %>
-
-<div id="products-screen">
-	<% Product.all.each do |p| %>
-		<div class="products-hidden <%= p.category.name %>">
-			<p><%= p.name %></p>
-			<span id="<%= p.name.split(' ').join('-') + '-price' %>" hidden><%= p.price %></span>
-			<input class="checkboxes" type="checkbox" id='<%= p.name.split(' ').join('-') %>' >
-			<span class="product-id"><%= p.id %></span>
+<section class="new-order">
+	<h1>New Order</h1>
+	<div class="select-menu">
+		<div class="categories">
+			<% @categories.each do |category| %>
+				<button class="category-buttons" id="<%= category.name %>"><%= category.name %></button>
+			<% end %>	
 		</div>
-	<% end %>
-</div>
+		
+		<div id="products-options">
+			<h3>Opciones</h3>
+			<% Product.all.each do |p| %>
+				<div class="products-hidden <%= p.category.name %>">
+					<p><%= p.name %></p>
+					<span id="<%= p.name.split(' ').join('-') + '-price' %>" hidden><%= p.price %></span>
+					<input class="checkboxes roundedOne" type="checkbox" id='<%= p.name.split(' ').join('-') %>' >
+					<span class="product-id" hidden><%= p.id %></span>
+				</div>
+			<% end %>
+		</div>	
+	</div>
+	
+	<div class="order-screen-container">
+		<%= render 'form' %>
+	</div>
 
-<%= render 'form' %>
-
-<%= link_to 'Back', orders_path %>
+	
+	<%= link_to 'Back', orders_path %>	
+</section>

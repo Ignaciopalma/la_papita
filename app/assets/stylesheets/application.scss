@@ -13,11 +13,18 @@
  */
 @import 'bourbon';
 @import 'neat';
+@import 'mixins';
+
+// COLORES
+$dark-blue: rgba(8, 16, 41, 1);
+$turq: rgba(22, 162, 149, 0.39);
+$light-blue: rgba(82, 134, 150, 0.92);
+$green: rgba(39, 107, 17, 0.92);
+$beige: rgba(255, 237, 173, 0.92);
 
 body {
-	div#products-screen {
-		div.products-hidden {
-			display: none;
-		}
-	}
+	background-color: $turq;
+	
+	@import 'orders/new';
+	@import 'orders/show';
 }
