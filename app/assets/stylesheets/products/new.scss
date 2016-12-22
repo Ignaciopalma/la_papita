@@ -1,0 +1,100 @@
+section.new-product {
+	h1 {
+
+	}
+
+	form {
+		div.container {
+			@include outer-container;
+			div.name-category {
+				@include span-columns(6);
+				padding: 0 80px;
+
+				h1 {
+					margin-bottom: 60px;
+				}
+
+				div.field {
+					input {
+						width: 100%;
+						background-color: $beige;
+						height: 25px;
+						border: 0;
+						border-radius: 5px;
+						margin-bottom: 25px;
+					}
+
+					select {
+						background-color: $beige;
+						height: 25px;
+						width: 100%;
+					}
+				}
+			}
+
+			div.add-ingredients {
+				@include span-columns(6);
+				@include omega();
+					
+				div.add-button {
+					text-align: center;
+					padding: 0 20%;
+					p#more {
+						background-color: $light-blue;
+						color: $beige;
+						border: 0;
+						border-radius: 5px;
+						padding: 8px 0;
+						font-size: 1em;
+						width: 100%;
+					}	
+				}
+
+				div.add-button:hover {
+					cursor: pointer;
+				}
+
+				div#new-ingredients-container {
+					padding: 0 55px;
+					div.titles {
+						@include outer-container;
+						p {
+							@include span-columns(6);	
+						}
+					}
+
+					div.ingredients-row {
+						@include outer-container;
+						margin: 10px 0;
+						select.ingredients-select {
+							@include span-columns(6);
+							background-color: $beige;
+							height: 25px;
+						}
+
+						input {
+							@include span-columns(6);
+							background-color: $beige;
+							height: 25px;
+							border: 0;
+    						border-radius: 5px;
+						}
+					}
+				}
+			}	
+		}
+
+		div.actions {
+			text-align: center;
+			padding: 70px 33%;
+
+			input {
+				background-color: $turq;
+				height: 25px;
+				border: 0;
+				border-radius: 5px;
+				width: 100%;
+			}
+		}
+	}
+}

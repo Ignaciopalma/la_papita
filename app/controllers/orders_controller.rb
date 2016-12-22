@@ -91,6 +91,7 @@ class OrdersController < ApplicationController
       Supply.where(id: params[:supplies_ids][index]).update_all(stock: params[:new_stock_amount][index])
       index += 1
     end
+    redirect_to action: 'new'
   end
 
   private
