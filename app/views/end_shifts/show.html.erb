@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Cashier name:</strong>
+  <%= @end_shift.cashier_name %>
+</p>
+
+<p>
+  <strong>Cash:</strong>
+  <%= @end_shift.cash %>
+</p>
+
+<p>
+  <strong>Debit:</strong>
+  <%= @end_shift.debit %>
+</p>
+
+<p>
+  <strong>Credit:</strong>
+  <%= @end_shift.credit %>
+</p>
+
+<p>
+  <strong>Agreement:</strong>
+  <%= @end_shift.agreement %>
+</p>
+
+<%= link_to 'Edit', edit_end_shift_path(@end_shift) %> |
+<%= link_to 'Back', end_shifts_path %>

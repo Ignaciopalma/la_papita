@@ -3,14 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <title>LaPapitaPro</title>
-  <script type="text/javascript" src="/assets/rsvp-3.1.0.min.js"></script>
-   <script type="text/javascript" src="/assets/sha-256.min.js"></script>
-   <script type="text/javascript" src="/assets/qz-tray.js"></script>
+  
+	<script type="text/javascript" src="/assets/rsvp-3.1.0.min.js"></script>
+	<script type="text/javascript" src="/assets/sha-256.min.js"></script>
+	<script type="text/javascript" src="/assets/qz-tray.js"></script>
+	
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', params[:controller], 'data-turbolinks-track' => true %>
+  <%#= javascript_include_tag 'application', params[:controller], 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', params[:controller] %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body class="<%= controller_name %> <%= action_name %>">
+
+<%= render 'layouts/header' %>
 
 <%= yield %>
 

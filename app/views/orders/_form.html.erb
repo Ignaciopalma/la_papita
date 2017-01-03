@@ -11,6 +11,12 @@
     </div>
   <% end %>
 
+  <% if cashier_signed_in? %>
+      <div class="field">
+        <%= f.label :cajero %><br>
+        <%= f.text_field :cashier_name, :value => current_cashier.name, :readonly => true %>
+      </div>
+  <% end %>
   <div class="order-screen">
       <%= f.fields_for :order_details, @order_details do |ff| %>
       <div class="table-container">
@@ -32,15 +38,23 @@
 
     <div class="general-inputs">
       <div class="field">
+        <%= f.hidden_field :cashier_id, :value => current_cashier.id %>
+        <%= f.hidden_field :sign_in_count, :value => current_cashier.sign_in_count %>
+      </div>
+      <div class="field">
         <%= f.label :cliente %><br>
         <%= f.text_field :client %>
       </div>
       <div class="field">
         <%= f.label :Medio_de_pago %><br>
-        <%#= f.select :payment_method, options_for_select(['Credito', 'Debito', '20000', '10000', '5000', '2000', '1000']) %>
-        <%= f.number_field :payment_method %>
+        <%= f.select :payment_method, options_for_select(['Credito', 'Debito', 'Efectivo', 'Convenio']) %>
+      </div>
+      <div class="field">
+        <label>Ingresar Monto</label>
+        <%= number_field_tag "order_payment_value" %>
 
       </div>
+
       <div class="field">
         <%= f.label :total %><br>
         <%= f.number_field :total %>

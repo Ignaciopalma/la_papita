@@ -11,7 +11,44 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161220032702) do
+ActiveRecord::Schema.define(version: 20161229195433) do
+
+  create_table "admins", force: :cascade do |t|
+    t.string   "email",                  default: "", null: false
+    t.string   "encrypted_password",     default: "", null: false
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",          default: 0,  null: false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
+  end
+
+  add_index "admins", ["email"], name: "index_admins_on_email", unique: true
+  add_index "admins", ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true
+
+  create_table "cashiers", force: :cascade do |t|
+    t.string   "email",                  default: "", null: false
+    t.string   "encrypted_password",     default: "", null: false
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",          default: 0,  null: false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
+    t.string   "name"
+  end
+
+  add_index "cashiers", ["email"], name: "index_cashiers_on_email", unique: true
+  add_index "cashiers", ["reset_password_token"], name: "index_cashiers_on_reset_password_token", unique: true
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
@@ -24,6 +61,34 @@ ActiveRecord::Schema.define(version: 20161220032702) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
+
+  create_table "end_shifts", force: :cascade do |t|
+    t.string   "cashier_name"
+    t.integer  "cash"
+    t.integer  "debit"
+    t.integer  "credit"
+    t.string   "agreement"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  create_table "managers", force: :cascade do |t|
+    t.string   "email",                  default: "", null: false
+    t.string   "encrypted_password",     default: "", null: false
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",          default: 0,  null: false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
+  end
+
+  add_index "managers", ["email"], name: "index_managers_on_email", unique: true
+  add_index "managers", ["reset_password_token"], name: "index_managers_on_reset_password_token", unique: true
 
   create_table "order_details", force: :cascade do |t|
     t.integer  "order_id"
@@ -41,6 +106,9 @@ ActiveRecord::Schema.define(version: 20161220032702) do
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
     t.string   "client"
+    t.string   "cashier_name"
+    t.integer  "cashier_id"
+    t.integer  "sign_in_count"
   end
 
   create_table "products", force: :cascade do |t|

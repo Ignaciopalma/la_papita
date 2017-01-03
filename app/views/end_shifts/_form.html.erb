@@ -1,0 +1,37 @@
+<%= form_for(@end_shift) do |f| %>
+  <% if @end_shift.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@end_shift.errors.count, "error") %> prohibited this end_shift from being saved:</h2>
+
+      <ul>
+      <% @end_shift.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :cashier_name %><br>
+    <%= f.text_field :cashier_name, :value => @cashier_name, :readonly => true %>
+  </div>
+  <div class="field">
+    <%= f.label :cash %><br>
+    <%= f.number_field :cash, :value => @total_cash, :readonly => true %>
+  </div>
+  <div class="field">
+    <%= f.label :debit %><br>
+    <%= f.number_field :debit, :value => @total_debit, :readonly => true %>
+  </div>
+  <div class="field">
+    <%= f.label :credit %><br>
+    <%= f.number_field :credit, :value => @total_credit, :readonly => true %>
+  </div>
+  <div class="field">
+    <%= f.label :agreement %><br>
+    <%= f.number_field :agreement, :value => @total_agreement, :readonly => true %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

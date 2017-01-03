@@ -1,6 +1,6 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_manager!
   # GET /products
   # GET /products.json
   def index
@@ -14,12 +14,13 @@ class ProductsController < ApplicationController
 
   # GET /products/new
   def new
-    @product = Product.new
-    @consumptions = @product.consumptions.build
+    @new_product = Product.new
+    @consumptions = @new_product.consumptions.build
   end
 
   # GET /products/1/edit
   def edit
+    @new_product = Product.find(params[:id])
   end
 
   # POST /products
@@ -41,6 +42,12 @@ class ProductsController < ApplicationController
   # PATCH/PUT /products/1
   # PATCH/PUT /products/1.json
   def update
+    @product = Product.find(params[:id])
+    # @consumptions = @product.consumptions
+    # @consumptions.each do |c|
+    #   c.update(params.permit(:id, :consumption_id, :supply_id, :product_id, :consumption))
+    # end
+    
     respond_to do |format|
       if @product.update(product_params)
         format.html { redirect_to @product, notice: 'Product was successfully updated.' }
@@ -70,6 +77,6 @@ class ProductsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def product_params
-      params.require(:product).permit(:name, :price, :stock, :category_name, :category_id, consumptions_attributes: [:consumption_id, :supply_id, :product_id, :consumption])
+      params.require(:product).permit(:name, :price, :stock, :category_name, :category_id, consumptions_attributes: [:id, :consumption_id, :supply_id, :product_id, :consumption])
     end
 end

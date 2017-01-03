@@ -1,0 +1,1 @@
+json.partial! "end_shifts/end_shift", end_shift: @end_shift

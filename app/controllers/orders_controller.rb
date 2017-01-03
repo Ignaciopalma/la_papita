@@ -1,17 +1,20 @@
 class OrdersController < ApplicationController
   before_action :set_order, only: [:show, :edit, :update, :destroy]
-
-  def updateFirstTwo
-    
-      Supply.update(1, :name => 'Alexis')
-      
-  end
-
+  before_action :authenticate_manager!, only: [:index, :update, :destroy]
+  before_action :authenticate_admin!
+  before_action :authenticate_cashier!, only: [:new]
 
   # GET /orders
   # GET /orders.json
   def index
     @orders = Order.all
+
+    @orders_this_month = Order.where(created_at: Time.now.beginning_of_month..Time.now.end_of_month)
+    @sales = []
+    @orders_this_month.each do |order| 
+      @sales.push(order.total)
+    end
+    @total_sales_this_month = @sales.reduce(:+)
   end
 
   # GET /orders/1
@@ -39,6 +42,58 @@ class OrdersController < ApplicationController
     @products = Product.all
     @order = Order.new
     @order_details = @order.order_details.build
+
+    #Order.where(order.cashier.sign_in_count === current_cashier)
+    if cashier_signed_in?  
+      @cashier_name = current_cashier.name
+      @total_cash_sales = Order.where(cashier_id: current_cashier.id, sign_in_count: current_cashier.sign_in_count, payment_method: "Efectivo")
+      @total_credit_sales = Order.where(cashier_id: current_cashier.id, sign_in_count: current_cashier.sign_in_count, payment_method: "Credito")
+      @total_debit_sales = Order.where(cashier_id: current_cashier.id, sign_in_count: current_cashier.sign_in_count, payment_method: "Debito")
+      @total_agreement_sales = Order.where(cashier_id: current_cashier.id, sign_in_count: current_cashier.sign_in_count, payment_method: "Convenio")
+      
+      @cash_values = []
+      @credit_values = []
+      @debit_values = []
+      @agreement_values = []
+
+      if @total_cash_sales.length === 0
+        @cash_values = [0]
+      else
+        @total_cash_sales.each do |t| 
+          @cash_values.push(t.total)
+        end
+      end
+
+      if @total_credit_sales.length === 0
+        @credit_values = [0]
+      else
+        @total_credit_sales.each do |t| 
+          @credit_values.push(t.total)
+        end
+      end
+
+      if @total_debit_sales.length === 0
+        @debit_values = [0]
+      else  
+        @total_debit_sales.each do |t| 
+          @debit_values.push(t.total)
+        end
+      end
+
+      if @total_agreement_sales.length === 0
+        @agreement_values = [0]
+      else
+        @total_agreement_sales.each do |t| 
+          @agreement_values.push(t.total)
+        end
+      end
+
+      @total_cash = @cash_values.reduce(:+)
+      @total_credit = @credit_values.reduce(:+)
+      @total_debit = @debit_values.reduce(:+)
+      @total_agreement = @agreement_values.reduce(:+)
+    end
+
   end
 
   # GET /orders/1/edit
@@ -102,6 +157,6 @@ class OrdersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def order_params
-      params.require(:order).permit(:client, :detail, :payment_method, :total, order_details_attributes: [:order_id, :comments, :quantity, :sub_total, :product_id], supplies_attributes: [:name, :stock, :id])
+      params.require(:order).permit(:sign_in_count, :cashier_id, :cashier_name, :client, :detail, :payment_method, :total, order_details_attributes: [:order_id, :comments, :quantity, :sub_total, :product_id], supplies_attributes: [:name, :stock, :id])
     end
 end

@@ -1,6 +1,6 @@
 class ConsumptionsController < ApplicationController
   before_action :set_consumption, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_manager!
   # GET /consumptions
   # GET /consumptions.json
   def index

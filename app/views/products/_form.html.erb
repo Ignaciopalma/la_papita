@@ -1,10 +1,10 @@
-<%= form_for(@product) do |f| %>
-  <% if @product.errors.any? %>
+<%= form_for(@new_product) do |f| %>
+  <% if @new_product.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@product.errors.count, "error") %> prohibited this product from being saved:</h2>
+      <h2><%= pluralize(@new_product.errors.count, "error") %> prohibited this product from being saved:</h2>
 
       <ul>
-      <% @product.errors.full_messages.each do |message| %>
+      <% @new_product.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>
@@ -39,6 +39,7 @@
           <p>Consumo</p>
         </div>
         <div class="ingredients-row">
+          <%#= hidden_field "product[consumptions_attributes][id]", 67 %>
           <%= ff.select :supply_id, Supply.all.collect { |c| [ c.name, c.id ] }, {}, {class: "ingredients-select"}  %>
           <%= ff.number_field :consumption %>  
         </div>

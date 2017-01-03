@@ -8,4 +8,4 @@ Rails.application.config.assets.version = '1.0'
 
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
-Rails.application.config.assets.precompile += %w( products.js orders.js)
+Rails.application.config.assets.precompile += %w( products.js orders.js supplies.js order_details.js categories.js consumptions.js end_shifts.js)

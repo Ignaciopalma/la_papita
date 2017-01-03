@@ -12,7 +12,9 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
+//= require qz-tray
+//= require rsvp-3.1.0.min
+//= require sha-256.min
 
 
 

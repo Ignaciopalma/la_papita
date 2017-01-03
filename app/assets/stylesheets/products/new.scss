@@ -1,4 +1,4 @@
-section.new-product {
+section.new-product, section.edit-product {
 	h1 {
 
 	}
@@ -94,6 +94,8 @@ section.new-product {
 				border: 0;
 				border-radius: 5px;
 				width: 100%;
+				font-size: 1em;
+				color: $dark-blue;
 			}
 		}
 	}

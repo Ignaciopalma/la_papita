@@ -4,5 +4,5 @@ class Product < ActiveRecord::Base
 	has_many :consumptions
 	has_many :supplies, through: :consumptions
 
-	accepts_nested_attributes_for :consumptions
+	accepts_nested_attributes_for :consumptions, allow_destroy: true
 end

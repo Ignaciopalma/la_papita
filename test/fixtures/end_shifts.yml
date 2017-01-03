@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  cashier_name: MyString
+  cash: 1
+  debit: 1
+  credit: 1
+  agreement: MyString
+
+two:
+  cashier_name: MyString
+  cash: 1
+  debit: 1
+  credit: 1
+  agreement: MyString

@@ -1,0 +1,1 @@
+json.array! @end_shifts, partial: 'end_shifts/end_shift', as: :end_shift

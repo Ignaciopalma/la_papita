@@ -1,6 +1,6 @@
 class CategoriesController < ApplicationController
 	before_action :set_order, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_manager!
   def index
     @categories = Category.all
   end

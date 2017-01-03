@@ -1,5 +1,17 @@
 <section class="new-order">
-	<h1>New Order</h1>
+	<h1>Nueva Venta</h1>
+	<% if cashier_signed_in? %>
+		<%= link_to destroy_cashier_session_path(:cashier_name => @cashier_name, 
+												 :total_cash => @total_cash, 
+												 :total_credit => @total_credit, 
+												 :total_debit => @total_debit, 
+												 :total_agreement => @total_agreement), 
+												 method: :delete do %>
+
+		<button>Cerrar Sesion</button>
+		<% end %>
+
+	<% end %>
 	<div class="select-menu">
 		<div class="categories">
 			<% @categories.each do |category| %>
@@ -27,3 +39,4 @@
 	
 	<%= link_to 'Back', orders_path %>	
 </section>
+
