@@ -4,31 +4,17 @@ Rails.application.routes.draw do
 
   devise_for :managers, controllers: {
     sessions: 'managers/sessions'
-    registrations: 'managers/sessions'
-    confirmations: 'managers/sessions'
-    omniauth_callbacks: 'managers/sessions'
-    passwords: 'managers/sessions'
-    unlocks: 'managers/sessions'
   }
   resources :end_shifts
+  
   devise_for :cashiers, controllers: {
     sessions: 'cashiers/sessions'
-    registrations: 'cashiers/sessions'
-    confirmations: 'cashiers/sessions'
-    omniauth_callbacks: 'cashiers/sessions'
-    passwords: 'cashiers/sessions'
-    unlocks: 'cashiers/sessions'
   }
   
   devise_for :admins, controllers: {
     sessions: 'admins/sessions'
-    registrations: 'admins/sessions'
-    confirmations: 'admins/sessions'
-    omniauth_callbacks: 'admins/sessions'
-    passwords: 'admins/sessions'
-    unlocks: 'admins/sessions'
-
   }
+
   resources :consumptions
   resources :supplies  do
     collection do
