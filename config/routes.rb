@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   devise_for :managers, controllers: {
     sessions: 'managers/sessions'
   }
+
   resources :end_shifts
   
   devise_for :cashiers, controllers: {
@@ -12,9 +13,9 @@ Rails.application.routes.draw do
   }
   
   devise_for :admins, controllers: {
-    sessions: 'admins/sessions'
+    sessions: 'admins/sessions'    
   }
-
+  
   resources :consumptions
   resources :supplies  do
     collection do
