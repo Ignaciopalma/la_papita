@@ -1,17 +1,22 @@
 <section class="new-order">
-	<h1>Nueva Venta</h1>
-	<% if cashier_signed_in? %>
-		<%= link_to destroy_cashier_session_path(:cashier_name => @cashier_name, 
-												 :total_cash => @total_cash, 
-												 :total_credit => @total_credit, 
-												 :total_debit => @total_debit, 
-												 :total_agreement => @total_agreement), 
-												 method: :delete do %>
-
-		<button>Cerrar Sesion</button>
+	<div class="inner-header">
+		<div class="title-wrap">
+			<h1>Turno de</h1>
+			<p><%= current_cashier.name %></p>
+		</div>		
+		<% if cashier_signed_in? %>
+			<div class="end-shift-button">
+				<%= link_to destroy_cashier_session_path(:cashier_name => @cashier_name, 
+													 :total_cash => @total_cash, 
+													 :total_credit => @total_credit, 
+													 :total_debit => @total_debit, 
+													 :total_agreement => @total_agreement), 
+													 method: :delete do %>
+				<button>Cerrar Sesion</button>
+			<% end %>
+			</div>		
 		<% end %>
-
-	<% end %>
+	</div>	
 	<div class="select-menu">
 		<div class="categories">
 			<% @categories.each do |category| %>
@@ -34,9 +39,6 @@
 	
 	<div class="order-screen-container">
 		<%= render 'form' %>
-	</div>
-
-	
-	<%= link_to 'Back', orders_path %>	
+	</div>	
 </section>
 

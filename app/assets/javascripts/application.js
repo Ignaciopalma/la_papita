@@ -16,7 +16,19 @@
 //= require rsvp-3.1.0.min
 //= require sha-256.min
 
+$(document).ready(function(){	
+	var rows = $('.table-row');
+    var count = 0;
 
+    while(count < rows.length) {      
+      if(count % 2 === 0) {
+        rows[count].classList.add('par');
+      } else {
+        rows[count].classList.add('impar');
+      }
+      count++;
+    }		
+});
 
 
 

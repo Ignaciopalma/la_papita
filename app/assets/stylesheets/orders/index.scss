@@ -1,15 +1,3 @@
-section.orders {
-	margin: 0 20%;
-	table {
-		table-layout: fixed;
-		width: 100%;
-
-		thead {
-			tr {
-				th {
-					text-align: left;
-				}
-			}
-		}
-	}
+section.orders {	
+	@include table;	
 }

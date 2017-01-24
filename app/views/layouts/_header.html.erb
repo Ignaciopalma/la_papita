@@ -1,15 +1,15 @@
 <header>
 	<nav>
 		<ul>
-		<% if manager_signed_in? %>
+		<% if manager_signed_in? %>			
 			<li><%= link_to "Productos", products_path %></li>
 			<li><%= link_to "Insumos", supplies_path %></li>
 			<li><%= link_to "Categorias", categories_path %></li>
-			<li><%= link_to "Ventas", orders_path %></li>
-			<li><%= link_to "IR A CAJA", new_order_path %></li>
-			<li><%= link_to "Cerrar Sesion", destroy_admin_session_path, method: :delete %></li>
+			<li><%= link_to "Ventas", orders_path %></li>			
+			<li><%= link_to "Cerrar Manager", destroy_manager_session_path, method: :delete %></li>			
+
 		<% elsif admin_signed_in? %>
-			<li><%= link_to "Cerrar Sesion", destroy_admin_session_path, method: :delete %>
+			<%#= link_to "Cerrar Admin", destroy_admin_session_path, method: :delete %>
 		<% end %>
 		</ul>
 	</nav>

@@ -37,10 +37,14 @@ $(document).ready(function(){
   		return parseInt(checkbox.nextSibling.nextSibling.innerText);
     	}
 
-    	function orderProductIdFunc(row, index, id) {
-    		var inner = '<input value=' + id + ' type="text" name="order[order_details_attributes][' + index + '][product_id]" id="order_order_details_attributes_' + index + '_product_id">';
-    		return row.appendChild(document.createElement('td')).innerHTML = inner; 
-    	}
+      function orderProductIdFunc(row, index, id) {        
+        var input = document.createElement('input');
+        input.value = id;
+        input.type = 'hidden';
+        input.name = "order[order_details_attributes][" + index + "][product_id]";
+        input.id = "order_order_details_attributes_" + index + "_product_id";
+        return document.getElementById('new_order').appendChild(input);
+      }
 
     	function orderCommentFunc(row, index) {
     		var inner = '<input type="text" name="order[order_details_attributes][' + index + '][comments]" class="comments-input" id="order_order_details_attributes_' + index + '_comments">';
@@ -62,10 +66,23 @@ $(document).ready(function(){
     		row.appendChild(document.createElement('td')).innerHTML = inner; 
     	}
 
-    	function orderSubTotalFunc(row, index, price) {
-    		var inner = '<input class="subTotal" value=' + price + ' type="text" name="order[order_details_attributes][' + index + '][sub_total]" id="order_order_details_attributes_' + index + '_sub_total">';
-    		return row.appendChild(document.createElement('td')).innerHTML = inner; 
-    	}
+      function orderSubTotalFunc(row, index, price) {      
+        var tableData = document.createElement('td');
+        var input = document.createElement('input');
+        input.classList.add("subTotal");
+        input.classList.add("sub-total-column");
+        input.value = price;
+        input.type = "text";
+        input.name = "order[order_details_attributes][" + index + "][sub_total]";
+        input.id = "order_order_details_attributes_" + index + "_sub_total";        
+        tableData.appendChild(input);
+        return row.appendChild(tableData);
+      }
+    	
+     //  function orderSubTotalFunc(row, index, price) {      
+    	// 	var inner = '<input class="subTotal" value=' + price + ' type="text" name="order[order_details_attributes][' + index + '][sub_total]" id="order_order_details_attributes_' + index + '_sub_total">';
+    	// 	return row.appendChild(document.createElement('td')).innerHTML = inner; 
+    	// }
 
     	function checkAmountOfRows() {
     		return tableBody.childNodes.length - 1;
@@ -119,7 +136,7 @@ $(document).ready(function(){
 
     		Array.prototype.forEach.call(selectOpt, function(select) {
     			var sub = select.parentNode.nextSibling.childNodes[0];
-          var unitPrice = document.getElementById(select.parentNode.parentNode.childNodes[1].firstChild.value + '-price').innerText;
+          var unitPrice = document.getElementById(select.parentNode.parentNode.childNodes[0].firstChild.value + '-price').innerText;
     			select.addEventListener('change', function() {
     				sub.value = parseInt(select.value) * parseInt(unitPrice);
     				calculateTotal();

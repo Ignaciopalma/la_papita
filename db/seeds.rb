@@ -153,10 +153,7 @@ Consumption.create(id: 66, product_id: 20, supply_id: 26 , consumption: 200)
 Consumption.create(id: 67, product_id: 20, supply_id: 2 , consumption: 123)
 
 
-Cashier.create(name: "Alberto Hurtado" , email: "albert@gmail.com", password: "$2a$11$HS51mXMiEtGbmgtwV8u9yuod3IbJ7P6PG5fApXISeiL4XTNV5q6T6")
-Cashier.create(name: "Nelly Moraga" , email: "nelly@gmail.com", password: "$2a$11$Idys1uZAtz88wmt54SO0XOHCQiJLtalRPfygg13PXnxWHYYe8DX1m")
-Cashier.create(name: "Pedro Retamal" , email: "pedro@gmail.com", password: "$2a$11$SBPTsjMh4yv9SXYDjkPsRubxR.gR6EmmBW4MoU6UF4weC9b6FiY76")
-Cashier.create(name: "Jose Inostroza" , email: "jose@gmail.com", password: "$2a$11$2eB21c9ZOCYRB9duT3I/dOgpfbmZIb77LMgh4z81Vjcjxb2PUpGAe")
+
 # def getProductSeed(arrayOfProducts)
 # 	finalString = ""
 # 	arrayOfProducts.each do |product|

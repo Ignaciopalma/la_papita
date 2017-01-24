@@ -83,3 +83,43 @@
 		opacity: 1;
 	}
 }
+
+
+
+@mixin table {
+	div.table-wrapper {
+		margin: 0 10%;
+		table {
+			table-layout: fixed;
+	    	width: 100%;	    	
+	    	border-spacing: 0;
+
+
+	    	thead {
+				tr {
+					background: $light-blue;
+					th {
+
+					}
+				}
+	    	}
+
+	    	tbody {
+				tr {					
+					height: 35px;
+					td {
+						text-align: center;
+					}
+				}
+
+				tr.par {
+					background: $light-beige;
+				}
+
+				tr.impar {
+					background: $beige;
+				}
+	    	}
+		}	
+	}	
+}

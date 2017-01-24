@@ -12,9 +12,8 @@
   <% end %>
 
   <% if cashier_signed_in? %>
-      <div class="field">
-        <%= f.label :cajero %><br>
-        <%= f.text_field :cashier_name, :value => current_cashier.name, :readonly => true %>
+      <div class="field">        
+        <%= f.hidden_field :cashier_name, :value => current_cashier.name %>
       </div>
   <% end %>
   <div class="order-screen">
@@ -22,12 +21,11 @@
       <div class="table-container">
         <table>
           <col width="130">
-          <thead>
-            <td class="column-title">ID</td>
+          <thead>            
             <td class="column-title">Product</td>
             <td class="column-title">Comment</td>
             <td class="column-title">Quantity</td>
-            <td class="column-title">Sub Total</td>
+            <td class="column-title sub-total-column">Sub Total</td>
           </thead>
           <tbody id="table-body">
             

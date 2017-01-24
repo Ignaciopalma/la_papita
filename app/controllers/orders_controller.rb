@@ -1,7 +1,7 @@
 class OrdersController < ApplicationController
   before_action :set_order, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_manager!, only: [:index, :update, :destroy]
-  before_action :authenticate_admin!
+  before_action :authenticate_manager!, only: [:index]
+  before_action :authenticate_admin!, only: [:new]
   before_action :authenticate_cashier!, only: [:new]
 
   # GET /orders

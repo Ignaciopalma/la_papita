@@ -1,0 +1,19 @@
+section.home {
+	text-align: center;
+	margin: 0 35%;
+
+	div {
+		margin: 20px 0;
+		a {
+			button {
+				width: 100%;
+				background: $light-blue;
+				border: 0;
+				border-radius: 5px;
+				height: 30px;
+				color: white;
+				font-size: 1.1em;
+			}
+		}
+	}
+}

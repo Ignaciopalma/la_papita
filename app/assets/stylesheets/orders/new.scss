@@ -1,5 +1,33 @@
 section.new-order {
 	@include outer-container;
+	div.inner-header {
+		margin: 30px 0;
+		@include outer-container;
+		div.title-wrap {
+			@include span-columns(6);
+
+			h1, p {			
+				margin: 0;
+			}
+		}		
+	
+		div.end-shift-button {
+			@include span-columns(6);
+			text-align: right;	
+
+			a {
+				button {
+					padding: 11px 50px;
+				    background: red;
+				    border: 0;
+				    border-radius: 5px;
+				    color: white;
+				    font-size: 1em;
+				}
+			}
+		}
+	}
+
 	div.select-menu {
 		@include span-columns(6);
 		div.categories {
@@ -87,6 +115,10 @@ section.new-order {
 							}
 						}
 					}
+
+					.sub-total-column {
+						text-align: right;
+					}
 				}
 			}
 
@@ -119,6 +151,7 @@ section.new-order {
 		}
 
 		span#vuelto-amount {
+			border-radius: 5px;
 			background-color: $green;
 			color: $beige;
 			padding: 10px 60px;

@@ -1,0 +1,33 @@
+section.cashiers-sign-in {
+	margin: 0 35%;
+	text-align:center;
+	h2 {
+
+	}
+
+	form {
+		div.field {
+			label {
+
+			}
+
+			select {
+				width: 100%;
+				background: $beige;
+				height: 30px;
+				margin: 15px 0;
+			}				
+		}
+
+		div.actions {
+			margin: 30px 0;
+			input[type="submit"] {
+				width: 100%;
+				background: $light-blue;
+				border: 0;
+				border-radius: 5px;
+				height: 30px;
+			}		
+		}
+	}
+}

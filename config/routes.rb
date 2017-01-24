@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  root 'pages#home'
+  get 'pages/home'
+
   devise_for :managers, controllers: {
     sessions: 'managers/sessions'
   }
@@ -6,7 +9,7 @@ Rails.application.routes.draw do
   devise_for :cashiers, controllers: {
     sessions: 'cashiers/sessions'
   }
-  root 'orders#new'
+  
   devise_for :admins, controllers: {
     sessions: 'admins/sessions'
   }

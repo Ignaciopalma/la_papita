@@ -26,7 +26,7 @@ class EndShiftsController < ApplicationController
     
     respond_to do |format|
       if @end_shift.save
-        format.html { redirect_to @end_shift, notice: 'End shift was successfully created.' }
+        format.html { redirect_to root_path, notice: 'End shift was successfully created.' }
         format.json { render :show, status: :created, location: @end_shift }
       else
         format.html { render :new }

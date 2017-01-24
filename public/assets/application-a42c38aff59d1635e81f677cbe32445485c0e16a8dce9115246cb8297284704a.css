@@ -1,0 +1,780 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ */
+/* line 4, /Users/ignaciopalma/.rvm/gems/ruby-2.2.2/gems/neat-1.8.0/app/assets/stylesheets/grid/_box-sizing.scss */
+html {
+  box-sizing: border-box;
+}
+
+/* line 9, /Users/ignaciopalma/.rvm/gems/ruby-2.2.2/gems/neat-1.8.0/app/assets/stylesheets/grid/_box-sizing.scss */
+*, *::after, *::before {
+  box-sizing: inherit;
+}
+
+/* line 27, /Users/ignaciopalma/Desktop/my-rails-projects/la_papita_pro/app/assets/stylesheets/application.scss */
+body {
+  background-color: rgba(22, 162, 149, 0.39);
+}
+/* line 1, /Users/ignaciopalma/Desktop/my-rails-projects/la_papita_pro/app/assets/stylesheets/orders/new.scss */
+body section.new-order {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 20, /Users/ignaciopalma/.rvm/gems/ruby-2.2.2/gems/neat-1.8.0/app/assets/stylesheets/mixins/_clearfix.scss */
+body section.new-order::after {
+  clear: both;
+  content: "";
+  display: block;
+}
+/* line 3, /Users/ignaciopalma/Desktop/my-rails-projects/la_papita_pro/app/assets/stylesheets/orders/new.scss */
+body section.new-order div.inner-header {
+  margin: 30px 0;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 20, /Users/ignaciopalma/.rvm/gems/ruby-2.2.2/gems/neat-1.8.0/app/assets/stylesheets/mixins/_clearfix.scss */
+body section.new-order div.inner-header::after {
+  clear: both;
+  content: "";
+  display: block;
+}
+/* line 6, /Users/ignaciopalma/Desktop/my-rails-projects/la_papita_pro/app/assets/stylesheets/orders/new.scss */
+body section.new-order div.inner-header div.title-wrap {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 48.82117%;
+}
+/* line 89, /Users/ignaciopalma/.rvm/gems/ruby-2.2.2/gems/neat-1.8.0/app/assets/stylesheets/grid/_span-columns.scss */
+body section.new-order div.inner-header div.title-wrap:last-child {
+  margin-right: 0;
+}
+/* line 9, /Users/ignaciopalma/Desktop/my-rails-projects/la_papita_pro/app/assets/stylesheets/orders/new.scss */
+body section.new-order div.inner-header div.title-wrap h1, body section.new-order div.inner-header div.title-wrap p {
+  margin: 0;
+}
+/* line 14, /Users/ignaciopalma/Desktop/my-rails-projects/la_papita_pro/app/assets/stylesheets/orders/new.scss */
+body section.new-order div.inner-header div.end-shift-button {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 48.82117%;
+  text-align: right;
+}
+/* line 89, /Users/ignaciopalma/.rvm/gems/ruby-2.2.2/gems/neat-1.8.0/app/assets/stylesheets/grid/_span-columns.scss */
+body section.new-order div.inner-header div.end-shift-button:last-child {
+  margin-right: 0;
+}
+/* line 19, /Users/ignaciopalma/Desktop/my-rails-projects/la_papita_pro/app/assets/stylesheets/orders/new.scss */
+body section.new-order div.inner-header div.end-shift-button a button {
+  padding: 11px 50px;
+  background: red;
+  border: 0;
+  border-radius: 5px;
+  color: white;
+  font-size: 1em;
+}
+/* line 31, /Users/ignaciopalma/Desktop/my-rails-projects/la_papita_pro/app/assets/stylesheets/orders/new.scss */
+body section.new-order div.select-menu {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 48.82117%;
+}
+/* line 89, /Users/ignaciopalma/.rvm/gems/ruby-2.2.2/gems/neat-1.8.0/app/assets/stylesheets/grid/_span-columns.scss */
+body section.new-order div.select-menu:last-child {
+  margin-right: 0;
+}
+/* line 33, /Users/ignaciopalma/Desktop/my-rails-projects/la_papita_pro/app/assets/stylesheets/orders/new.scss */
+body section.new-order div.select-menu div.categories {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 20, /Users/ignaciopalma/.rvm/gems/ruby-2.2.2/gems/neat-1.8.0/app/assets/stylesheets/mixins/_clearfix.scss */
+body section.new-order div.select-menu div.categories::after {
+  clear: both;
+  content: "";
+  display: block;
+}
+/* line 35, /Users/ignaciopalma/Desktop/my-rails-projects/la_papita_pro/app/assets/stylesheets/orders/new.scss */
+body section.new-order div.select-menu div.categories button.category-buttons {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 31.76157%;
+  background-color: rgba(82, 134, 150, 0.92);
+  color: rgba(255, 237, 173, 0.92);
+  border: 0;
+  border-radius: 5px;
+  height: 30px;
+  font-size: 1em;
+  margin-bottom: 10px;
+}
+/* line 89, /Users/ignaciopalma/.rvm/gems/ruby-2.2.2/gems/neat-1.8.0/app/assets/stylesheets/grid/_span-columns.scss */
+body section.new-order div.select-menu div.categories button.category-buttons:last-child {
+  margin-right: 0;
+}
+/* line 78, /Users/ignaciopalma/.rvm/gems/ruby-2.2.2/gems/neat-1.8.0/app/assets/stylesheets/grid/_omega.scss */
+body section.new-order div.select-menu div.categories button.category-buttons:nth-child(3n) {
+  margin-right: 0;
+}
+/* line 83, /Users/ignaciopalma/.rvm/gems/ruby-2.2.2/gems/neat-1.8.0/app/assets/stylesheets/grid/_omega.scss */
+body section.new-order div.select-menu div.categories button.category-buttons:nth-child(3n+1) {
+  clear: left;
+}
+/* line 47, /Users/ignaciopalma/Desktop/my-rails-projects/la_papita_pro/app/assets/stylesheets/orders/new.scss */
+body section.new-order div.select-menu div.categories button:hover {
+  cursor: pointer;
+}
+/* line 52, /Users/ignaciopalma/Desktop/my-rails-projects/la_papita_pro/app/assets/stylesheets/orders/new.scss */
+body section.new-order div.select-menu div#products-options {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 70px;
+}
+/* line 20, /Users/ignaciopalma/.rvm/gems/ruby-2.2.2/gems/neat-1.8.0/app/assets/stylesheets/mixins/_clearfix.scss */
+body section.new-order div.select-menu div#products-options::after {
+  clear: both;
+  content: "";
+  display: block;
+}
+/* line 55, /Users/ignaciopalma/Desktop/my-rails-projects/la_papita_pro/app/assets/stylesheets/orders/new.scss */
+body section.new-order div.select-menu div#products-options h3 {
+  text-align: center;
+}
+/* line 58, /Users/ignaciopalma/Desktop/my-rails-projects/la_papita_pro/app/assets/stylesheets/orders/new.scss */
+body section.new-order div.select-menu div#products-options div.products-hidden {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 31.76157%;
+  margin-right: 0;
+  display: none;
+  text-align: center;
+}
+/* line 89, /Users/ignaciopalma/.rvm/gems/ruby-2.2.2/gems/neat-1.8.0/app/assets/stylesheets/grid/_span-columns.scss */
+body section.new-order div.select-menu div#products-options div.products-hidden:last-child {
+  margin-right: 0;
+}
+/* line 63, /Users/ignaciopalma/Desktop/my-rails-projects/la_papita_pro/app/assets/stylesheets/orders/new.scss */
+body section.new-order div.select-menu div#products-options div.products-hidden input[type=checkbox] {
+  transform: scale(2);
+}
+/* line 75, /Users/ignaciopalma/Desktop/my-rails-projects/la_papita_pro/app/assets/stylesheets/orders/new.scss */
+body section.new-order div.order-screen-container {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 48.82117%;
+  margin-right: 0;
+}
+/* line 89, /Users/ignaciopalma/.rvm/gems/ruby-2.2.2/gems/neat-1.8.0/app/assets/stylesheets/grid/_span-columns.scss */
+body section.new-order div.order-screen-container:last-child {
+  margin-right: 0;
+}
+/* line 79, /Users/ignaciopalma/Desktop/my-rails-projects/la_papita_pro/app/assets/stylesheets/orders/new.scss */
+body section.new-order div.order-screen-container div.order-screen {
+  height: 640px;
+  background-color: #081029;
+  color: rgba(255, 237, 173, 0.92);
+  padding: 5px 20px;
+  border-radius: 10px;
+}
+/* line 86, /Users/ignaciopalma/Desktop/my-rails-projects/la_papita_pro/app/assets/stylesheets/orders/new.scss */
+body section.new-order div.order-screen-container div.order-screen div.table-container {
+  height: 70%;
+}
+/* line 88, /Users/ignaciopalma/Desktop/my-rails-projects/la_papita_pro/app/assets/stylesheets/orders/new.scss */
+body section.new-order div.order-screen-container div.order-screen div.table-container table {
+  table-layout: fixed;
+  width: 100%;
+}
+/* line 94, /Users/ignaciopalma/Desktop/my-rails-projects/la_papita_pro/app/assets/stylesheets/orders/new.scss */
+body section.new-order div.order-screen-container div.order-screen div.table-container table tbody tr td input {
+  background: transparent;
+  border: 0;
+  color: rgba(255, 237, 173, 0.92);
+}
+/* line 100, /Users/ignaciopalma/Desktop/my-rails-projects/la_papita_pro/app/assets/stylesheets/orders/new.scss */
+body section.new-order div.order-screen-container div.order-screen div.table-container table tbody tr td input.comments-input {
+  background-color: rgba(255, 237, 173, 0.92);
+  color: #081029;
+  width: 90%;
+  border-radius: 3px;
+}
+/* line 107, /Users/ignaciopalma/Desktop/my-rails-projects/la_papita_pro/app/assets/stylesheets/orders/new.scss */
+body section.new-order div.order-screen-container div.order-screen div.table-container table tbody tr td select {
+  background-color: rgba(255, 237, 173, 0.92);
+  width: 80%;
+}
+/* line 113, /Users/ignaciopalma/Desktop/my-rails-projects/la_papita_pro/app/assets/stylesheets/orders/new.scss */
+body section.new-order div.order-screen-container div.order-screen div.table-container table tbody tr td:last-child {
+  text-align: right;
+}
+/* line 119, /Users/ignaciopalma/Desktop/my-rails-projects/la_papita_pro/app/assets/stylesheets/orders/new.scss */
+body section.new-order div.order-screen-container div.order-screen div.table-container table .sub-total-column {
+  text-align: right;
+}
+/* line 125, /Users/ignaciopalma/Desktop/my-rails-projects/la_papita_pro/app/assets/stylesheets/orders/new.scss */
+body section.new-order div.order-screen-container div.order-screen div.general-inputs {
+  padding-left: 60%;
+  text-align: right;
+}
+/* line 129, /Users/ignaciopalma/Desktop/my-rails-projects/la_papita_pro/app/assets/stylesheets/orders/new.scss */
+body section.new-order div.order-screen-container div.order-screen div.general-inputs div.field input, body section.new-order div.order-screen-container div.order-screen div.general-inputs div.field select {
+  background-color: rgba(255, 237, 173, 0.92);
+  border: 0;
+  height: 25px;
+  font-weight: bold;
+  text-align: right;
+  font-size: 1em;
+  width: 100%;
+}
+/* line 143, /Users/ignaciopalma/Desktop/my-rails-projects/la_papita_pro/app/assets/stylesheets/orders/new.scss */
+body section.new-order div#vuelto {
+  text-align: right;
+  padding: 20px 0;
+}
+/* line 146, /Users/ignaciopalma/Desktop/my-rails-projects/la_papita_pro/app/assets/stylesheets/orders/new.scss */
+body section.new-order div#vuelto span#calcular-button {
+  color: rgba(39, 107, 17, 0.92);
+  padding: 10px 60px;
+  margin: 10px 0;
+  font-size: 1.1em;
+}
+/* line 153, /Users/ignaciopalma/Desktop/my-rails-projects/la_papita_pro/app/assets/stylesheets/orders/new.scss */
+body section.new-order div#vuelto span#vuelto-amount {
+  border-radius: 5px;
+  background-color: rgba(39, 107, 17, 0.92);
+  color: rgba(255, 237, 173, 0.92);
+  padding: 10px 60px;
+  margin: 10px 0;
+}
+/* line 162, /Users/ignaciopalma/Desktop/my-rails-projects/la_papita_pro/app/assets/stylesheets/orders/new.scss */
+body section.new-order div.actions {
+  text-align: center;
+}
+/* line 164, /Users/ignaciopalma/Desktop/my-rails-projects/la_papita_pro/app/assets/stylesheets/orders/new.scss */
+body section.new-order div.actions input[type="submit"] {
+  width: 70%;
+  background: rgba(82, 134, 150, 0.92);
+  padding: 10px 60px;
+  margin: 20px 0;
+  border: 0;
+  border-radius: 5px;
+  color: white;
+  font-size: 1em;
+}
+/* line 2, /Users/ignaciopalma/Desktop/my-rails-projects/la_papita_pro/app/assets/stylesheets/orders/show.scss */
+body section.order-show div.bill {
+  background-color: white;
+  margin: 0 30%;
+  padding: 2px 35px;
+}
+/* line 7, /Users/ignaciopalma/Desktop/my-rails-projects/la_papita_pro/app/assets/stylesheets/orders/show.scss */
+body section.order-show div.bill h1 {
+  text-align: center;
+  font-size: 2em;
+}
+/* line 12, /Users/ignaciopalma/Desktop/my-rails-projects/la_papita_pro/app/assets/stylesheets/orders/show.scss */
+body section.order-show div.bill div.order-details {
+  margin: 30px 0;
+}
+/* line 14, /Users/ignaciopalma/Desktop/my-rails-projects/la_papita_pro/app/assets/stylesheets/orders/show.scss */
+body section.order-show div.bill div.order-details h2 {
+  text-align: center;
+}
+/* line 17, /Users/ignaciopalma/Desktop/my-rails-projects/la_papita_pro/app/assets/stylesheets/orders/show.scss */
+body section.order-show div.bill div.order-details table {
+  table-layout: fixed;
+  width: 100%;
+}
+/* line 22, /Users/ignaciopalma/Desktop/my-rails-projects/la_papita_pro/app/assets/stylesheets/orders/show.scss */
+body section.order-show div.bill div.order-details table thead td {
+  text-align: right;
+}
+/* line 25, /Users/ignaciopalma/Desktop/my-rails-projects/la_papita_pro/app/assets/stylesheets/orders/show.scss */
+body section.order-show div.bill div.order-details table thead td:first-child {
+  text-align: left;
+}
+/* line 32, /Users/ignaciopalma/Desktop/my-rails-projects/la_papita_pro/app/assets/stylesheets/orders/show.scss */
+body section.order-show div.bill div.order-details table tbody tr td {
+  text-align: right;
+}
+/* line 35, /Users/ignaciopalma/Desktop/my-rails-projects/la_papita_pro/app/assets/stylesheets/orders/show.scss */
+body section.order-show div.bill div.order-details table tbody tr td:first-child {
+  text-align: left;
+}
+/* line 43, /Users/ignaciopalma/Desktop/my-rails-projects/la_papita_pro/app/assets/stylesheets/orders/show.scss */
+body section.order-show div.bill div.order-general {
+  margin-top: 80px;
+}
+/* line 45, /Users/ignaciopalma/Desktop/my-rails-projects/la_papita_pro/app/assets/stylesheets/orders/show.scss */
+body section.order-show div.bill div.order-general h2 {
+  text-align: center;
+}
+/* line 49, /Users/ignaciopalma/Desktop/my-rails-projects/la_papita_pro/app/assets/stylesheets/orders/show.scss */
+body section.order-show div.bill div.order-general div.general-info {
+  text-align: right;
+}
+/* line 55, /Users/ignaciopalma/Desktop/my-rails-projects/la_papita_pro/app/assets/stylesheets/orders/show.scss */
+body section.order-show form {
+  text-align: center;
+}
+/* line 58, /Users/ignaciopalma/Desktop/my-rails-projects/la_papita_pro/app/assets/stylesheets/orders/show.scss */
+body section.order-show form div.total-consumption-form {
+  display: none;
+}
+/* line 62, /Users/ignaciopalma/Desktop/my-rails-projects/la_papita_pro/app/assets/stylesheets/orders/show.scss */
+body section.order-show form input[type="submit"] {
+  background: rgba(82, 134, 150, 0.92);
+  padding: 10px 60px;
+  margin: 20px 0;
+  border: 0;
+  border-radius: 5px;
+  color: white;
+  font-size: 1em;
+}
+/* line 90, /Users/ignaciopalma/Desktop/my-rails-projects/la_papita_pro/app/assets/stylesheets/mixins.scss */
+body section.orders div.table-wrapper {
+  margin: 0 10%;
+}
+/* line 92, /Users/ignaciopalma/Desktop/my-rails-projects/la_papita_pro/app/assets/stylesheets/mixins.scss */
+body section.orders div.table-wrapper table {
+  table-layout: fixed;
+  width: 100%;
+  border-spacing: 0;
+}
+/* line 99, /Users/ignaciopalma/Desktop/my-rails-projects/la_papita_pro/app/assets/stylesheets/mixins.scss */
+body section.orders div.table-wrapper table thead tr {
+  background: rgba(82, 134, 150, 0.92);
+}
+/* line 108, /Users/ignaciopalma/Desktop/my-rails-projects/la_papita_pro/app/assets/stylesheets/mixins.scss */
+body section.orders div.table-wrapper table tbody tr {
+  height: 35px;
+}
+/* line 110, /Users/ignaciopalma/Desktop/my-rails-projects/la_papita_pro/app/assets/stylesheets/mixins.scss */
+body section.orders div.table-wrapper table tbody tr td {
+  text-align: center;
+}
+/* line 115, /Users/ignaciopalma/Desktop/my-rails-projects/la_papita_pro/app/assets/stylesheets/mixins.scss */
+body section.orders div.table-wrapper table tbody tr.par {
+  background: rgba(255, 237, 173, 0.5);
+}
+/* line 119, /Users/ignaciopalma/Desktop/my-rails-projects/la_papita_pro/app/assets/stylesheets/mixins.scss */
+body section.orders div.table-wrapper table tbody tr.impar {
+  background: rgba(255, 237, 173, 0.92);
+}
+/* line 7, /Users/ignaciopalma/Desktop/my-rails-projects/la_papita_pro/app/assets/stylesheets/products/new.scss */
+body section.new-product form div.container, body section.edit-product form div.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 20, /Users/ignaciopalma/.rvm/gems/ruby-2.2.2/gems/neat-1.8.0/app/assets/stylesheets/mixins/_clearfix.scss */
+body section.new-product form div.container::after, body section.edit-product form div.container::after {
+  clear: both;
+  content: "";
+  display: block;
+}
+/* line 9, /Users/ignaciopalma/Desktop/my-rails-projects/la_papita_pro/app/assets/stylesheets/products/new.scss */
+body section.new-product form div.container div.name-category, body section.edit-product form div.container div.name-category {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 48.82117%;
+  padding: 0 80px;
+}
+/* line 89, /Users/ignaciopalma/.rvm/gems/ruby-2.2.2/gems/neat-1.8.0/app/assets/stylesheets/grid/_span-columns.scss */
+body section.new-product form div.container div.name-category:last-child, body section.edit-product form div.container div.name-category:last-child {
+  margin-right: 0;
+}
+/* line 13, /Users/ignaciopalma/Desktop/my-rails-projects/la_papita_pro/app/assets/stylesheets/products/new.scss */
+body section.new-product form div.container div.name-category h1, body section.edit-product form div.container div.name-category h1 {
+  margin-bottom: 60px;
+}
+/* line 18, /Users/ignaciopalma/Desktop/my-rails-projects/la_papita_pro/app/assets/stylesheets/products/new.scss */
+body section.new-product form div.container div.name-category div.field input, body section.edit-product form div.container div.name-category div.field input {
+  width: 100%;
+  background-color: rgba(255, 237, 173, 0.92);
+  height: 25px;
+  border: 0;
+  border-radius: 5px;
+  margin-bottom: 25px;
+}
+/* line 27, /Users/ignaciopalma/Desktop/my-rails-projects/la_papita_pro/app/assets/stylesheets/products/new.scss */
+body section.new-product form div.container div.name-category div.field select, body section.edit-product form div.container div.name-category div.field select {
+  background-color: rgba(255, 237, 173, 0.92);
+  height: 25px;
+  width: 100%;
+}
+/* line 35, /Users/ignaciopalma/Desktop/my-rails-projects/la_papita_pro/app/assets/stylesheets/products/new.scss */
+body section.new-product form div.container div.add-ingredients, body section.edit-product form div.container div.add-ingredients {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 48.82117%;
+  margin-right: 0;
+}
+/* line 89, /Users/ignaciopalma/.rvm/gems/ruby-2.2.2/gems/neat-1.8.0/app/assets/stylesheets/grid/_span-columns.scss */
+body section.new-product form div.container div.add-ingredients:last-child, body section.edit-product form div.container div.add-ingredients:last-child {
+  margin-right: 0;
+}
+/* line 39, /Users/ignaciopalma/Desktop/my-rails-projects/la_papita_pro/app/assets/stylesheets/products/new.scss */
+body section.new-product form div.container div.add-ingredients div.add-button, body section.edit-product form div.container div.add-ingredients div.add-button {
+  text-align: center;
+  padding: 0 20%;
+}
+/* line 42, /Users/ignaciopalma/Desktop/my-rails-projects/la_papita_pro/app/assets/stylesheets/products/new.scss */
+body section.new-product form div.container div.add-ingredients div.add-button p#more, body section.edit-product form div.container div.add-ingredients div.add-button p#more {
+  background-color: rgba(82, 134, 150, 0.92);
+  color: rgba(255, 237, 173, 0.92);
+  border: 0;
+  border-radius: 5px;
+  padding: 8px 0;
+  font-size: 1em;
+  width: 100%;
+}
+/* line 53, /Users/ignaciopalma/Desktop/my-rails-projects/la_papita_pro/app/assets/stylesheets/products/new.scss */
+body section.new-product form div.container div.add-ingredients div.add-button:hover, body section.edit-product form div.container div.add-ingredients div.add-button:hover {
+  cursor: pointer;
+}
+/* line 57, /Users/ignaciopalma/Desktop/my-rails-projects/la_papita_pro/app/assets/stylesheets/products/new.scss */
+body section.new-product form div.container div.add-ingredients div#new-ingredients-container, body section.edit-product form div.container div.add-ingredients div#new-ingredients-container {
+  padding: 0 55px;
+}
+/* line 59, /Users/ignaciopalma/Desktop/my-rails-projects/la_papita_pro/app/assets/stylesheets/products/new.scss */
+body section.new-product form div.container div.add-ingredients div#new-ingredients-container div.titles, body section.edit-product form div.container div.add-ingredients div#new-ingredients-container div.titles {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 20, /Users/ignaciopalma/.rvm/gems/ruby-2.2.2/gems/neat-1.8.0/app/assets/stylesheets/mixins/_clearfix.scss */
+body section.new-product form div.container div.add-ingredients div#new-ingredients-container div.titles::after, body section.edit-product form div.container div.add-ingredients div#new-ingredients-container div.titles::after {
+  clear: both;
+  content: "";
+  display: block;
+}
+/* line 61, /Users/ignaciopalma/Desktop/my-rails-projects/la_papita_pro/app/assets/stylesheets/products/new.scss */
+body section.new-product form div.container div.add-ingredients div#new-ingredients-container div.titles p, body section.edit-product form div.container div.add-ingredients div#new-ingredients-container div.titles p {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 48.82117%;
+}
+/* line 89, /Users/ignaciopalma/.rvm/gems/ruby-2.2.2/gems/neat-1.8.0/app/assets/stylesheets/grid/_span-columns.scss */
+body section.new-product form div.container div.add-ingredients div#new-ingredients-container div.titles p:last-child, body section.edit-product form div.container div.add-ingredients div#new-ingredients-container div.titles p:last-child {
+  margin-right: 0;
+}
+/* line 66, /Users/ignaciopalma/Desktop/my-rails-projects/la_papita_pro/app/assets/stylesheets/products/new.scss */
+body section.new-product form div.container div.add-ingredients div#new-ingredients-container div.ingredients-row, body section.edit-product form div.container div.add-ingredients div#new-ingredients-container div.ingredients-row {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  margin: 10px 0;
+}
+/* line 20, /Users/ignaciopalma/.rvm/gems/ruby-2.2.2/gems/neat-1.8.0/app/assets/stylesheets/mixins/_clearfix.scss */
+body section.new-product form div.container div.add-ingredients div#new-ingredients-container div.ingredients-row::after, body section.edit-product form div.container div.add-ingredients div#new-ingredients-container div.ingredients-row::after {
+  clear: both;
+  content: "";
+  display: block;
+}
+/* line 69, /Users/ignaciopalma/Desktop/my-rails-projects/la_papita_pro/app/assets/stylesheets/products/new.scss */
+body section.new-product form div.container div.add-ingredients div#new-ingredients-container div.ingredients-row select.ingredients-select, body section.edit-product form div.container div.add-ingredients div#new-ingredients-container div.ingredients-row select.ingredients-select {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 48.82117%;
+  background-color: rgba(255, 237, 173, 0.92);
+  height: 25px;
+}
+/* line 89, /Users/ignaciopalma/.rvm/gems/ruby-2.2.2/gems/neat-1.8.0/app/assets/stylesheets/grid/_span-columns.scss */
+body section.new-product form div.container div.add-ingredients div#new-ingredients-container div.ingredients-row select.ingredients-select:last-child, body section.edit-product form div.container div.add-ingredients div#new-ingredients-container div.ingredients-row select.ingredients-select:last-child {
+  margin-right: 0;
+}
+/* line 75, /Users/ignaciopalma/Desktop/my-rails-projects/la_papita_pro/app/assets/stylesheets/products/new.scss */
+body section.new-product form div.container div.add-ingredients div#new-ingredients-container div.ingredients-row input, body section.edit-product form div.container div.add-ingredients div#new-ingredients-container div.ingredients-row input {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 48.82117%;
+  background-color: rgba(255, 237, 173, 0.92);
+  height: 25px;
+  border: 0;
+  border-radius: 5px;
+}
+/* line 89, /Users/ignaciopalma/.rvm/gems/ruby-2.2.2/gems/neat-1.8.0/app/assets/stylesheets/grid/_span-columns.scss */
+body section.new-product form div.container div.add-ingredients div#new-ingredients-container div.ingredients-row input:last-child, body section.edit-product form div.container div.add-ingredients div#new-ingredients-container div.ingredients-row input:last-child {
+  margin-right: 0;
+}
+/* line 87, /Users/ignaciopalma/Desktop/my-rails-projects/la_papita_pro/app/assets/stylesheets/products/new.scss */
+body section.new-product form div.actions, body section.edit-product form div.actions {
+  text-align: center;
+  padding: 70px 33%;
+}
+/* line 91, /Users/ignaciopalma/Desktop/my-rails-projects/la_papita_pro/app/assets/stylesheets/products/new.scss */
+body section.new-product form div.actions input, body section.edit-product form div.actions input {
+  background-color: rgba(22, 162, 149, 0.39);
+  height: 25px;
+  border: 0;
+  border-radius: 5px;
+  width: 100%;
+  font-size: 1em;
+  color: #081029;
+}
+/* line 1, /Users/ignaciopalma/Desktop/my-rails-projects/la_papita_pro/app/assets/stylesheets/cashiers/sign_in.scss */
+body section.cashiers-sign-in {
+  margin: 0 35%;
+  text-align: center;
+}
+/* line 14, /Users/ignaciopalma/Desktop/my-rails-projects/la_papita_pro/app/assets/stylesheets/cashiers/sign_in.scss */
+body section.cashiers-sign-in form div.field select {
+  width: 100%;
+  background: rgba(255, 237, 173, 0.92);
+  height: 30px;
+  margin: 15px 0;
+}
+/* line 22, /Users/ignaciopalma/Desktop/my-rails-projects/la_papita_pro/app/assets/stylesheets/cashiers/sign_in.scss */
+body section.cashiers-sign-in form div.actions {
+  margin: 30px 0;
+}
+/* line 24, /Users/ignaciopalma/Desktop/my-rails-projects/la_papita_pro/app/assets/stylesheets/cashiers/sign_in.scss */
+body section.cashiers-sign-in form div.actions input[type="submit"] {
+  width: 100%;
+  background: rgba(82, 134, 150, 0.92);
+  border: 0;
+  border-radius: 5px;
+  height: 30px;
+}
+/* line 1, /Users/ignaciopalma/Desktop/my-rails-projects/la_papita_pro/app/assets/stylesheets/admins/sign_in.scss */
+body section.admin-sign-in {
+  margin: 0 35%;
+  text-align: center;
+}
+/* line 14, /Users/ignaciopalma/Desktop/my-rails-projects/la_papita_pro/app/assets/stylesheets/admins/sign_in.scss */
+body section.admin-sign-in form div.field input {
+  width: 100%;
+  background: rgba(255, 237, 173, 0.92);
+  height: 30px;
+  margin: 15px 0;
+}
+/* line 22, /Users/ignaciopalma/Desktop/my-rails-projects/la_papita_pro/app/assets/stylesheets/admins/sign_in.scss */
+body section.admin-sign-in form div.actions {
+  margin: 30px 0;
+}
+/* line 24, /Users/ignaciopalma/Desktop/my-rails-projects/la_papita_pro/app/assets/stylesheets/admins/sign_in.scss */
+body section.admin-sign-in form div.actions input[type="submit"] {
+  width: 100%;
+  background: rgba(82, 134, 150, 0.92);
+  border: 0;
+  border-radius: 5px;
+  height: 30px;
+}
+/* line 90, /Users/ignaciopalma/Desktop/my-rails-projects/la_papita_pro/app/assets/stylesheets/mixins.scss */
+body section.products div.table-wrapper {
+  margin: 0 10%;
+}
+/* line 92, /Users/ignaciopalma/Desktop/my-rails-projects/la_papita_pro/app/assets/stylesheets/mixins.scss */
+body section.products div.table-wrapper table {
+  table-layout: fixed;
+  width: 100%;
+  border-spacing: 0;
+}
+/* line 99, /Users/ignaciopalma/Desktop/my-rails-projects/la_papita_pro/app/assets/stylesheets/mixins.scss */
+body section.products div.table-wrapper table thead tr {
+  background: rgba(82, 134, 150, 0.92);
+}
+/* line 108, /Users/ignaciopalma/Desktop/my-rails-projects/la_papita_pro/app/assets/stylesheets/mixins.scss */
+body section.products div.table-wrapper table tbody tr {
+  height: 35px;
+}
+/* line 110, /Users/ignaciopalma/Desktop/my-rails-projects/la_papita_pro/app/assets/stylesheets/mixins.scss */
+body section.products div.table-wrapper table tbody tr td {
+  text-align: center;
+}
+/* line 115, /Users/ignaciopalma/Desktop/my-rails-projects/la_papita_pro/app/assets/stylesheets/mixins.scss */
+body section.products div.table-wrapper table tbody tr.par {
+  background: rgba(255, 237, 173, 0.5);
+}
+/* line 119, /Users/ignaciopalma/Desktop/my-rails-projects/la_papita_pro/app/assets/stylesheets/mixins.scss */
+body section.products div.table-wrapper table tbody tr.impar {
+  background: rgba(255, 237, 173, 0.92);
+}
+/* line 90, /Users/ignaciopalma/Desktop/my-rails-projects/la_papita_pro/app/assets/stylesheets/mixins.scss */
+body section.categories div.table-wrapper {
+  margin: 0 10%;
+}
+/* line 92, /Users/ignaciopalma/Desktop/my-rails-projects/la_papita_pro/app/assets/stylesheets/mixins.scss */
+body section.categories div.table-wrapper table {
+  table-layout: fixed;
+  width: 100%;
+  border-spacing: 0;
+}
+/* line 99, /Users/ignaciopalma/Desktop/my-rails-projects/la_papita_pro/app/assets/stylesheets/mixins.scss */
+body section.categories div.table-wrapper table thead tr {
+  background: rgba(82, 134, 150, 0.92);
+}
+/* line 108, /Users/ignaciopalma/Desktop/my-rails-projects/la_papita_pro/app/assets/stylesheets/mixins.scss */
+body section.categories div.table-wrapper table tbody tr {
+  height: 35px;
+}
+/* line 110, /Users/ignaciopalma/Desktop/my-rails-projects/la_papita_pro/app/assets/stylesheets/mixins.scss */
+body section.categories div.table-wrapper table tbody tr td {
+  text-align: center;
+}
+/* line 115, /Users/ignaciopalma/Desktop/my-rails-projects/la_papita_pro/app/assets/stylesheets/mixins.scss */
+body section.categories div.table-wrapper table tbody tr.par {
+  background: rgba(255, 237, 173, 0.5);
+}
+/* line 119, /Users/ignaciopalma/Desktop/my-rails-projects/la_papita_pro/app/assets/stylesheets/mixins.scss */
+body section.categories div.table-wrapper table tbody tr.impar {
+  background: rgba(255, 237, 173, 0.92);
+}
+/* line 90, /Users/ignaciopalma/Desktop/my-rails-projects/la_papita_pro/app/assets/stylesheets/mixins.scss */
+body section.end-shifts div.table-wrapper {
+  margin: 0 10%;
+}
+/* line 92, /Users/ignaciopalma/Desktop/my-rails-projects/la_papita_pro/app/assets/stylesheets/mixins.scss */
+body section.end-shifts div.table-wrapper table {
+  table-layout: fixed;
+  width: 100%;
+  border-spacing: 0;
+}
+/* line 99, /Users/ignaciopalma/Desktop/my-rails-projects/la_papita_pro/app/assets/stylesheets/mixins.scss */
+body section.end-shifts div.table-wrapper table thead tr {
+  background: rgba(82, 134, 150, 0.92);
+}
+/* line 108, /Users/ignaciopalma/Desktop/my-rails-projects/la_papita_pro/app/assets/stylesheets/mixins.scss */
+body section.end-shifts div.table-wrapper table tbody tr {
+  height: 35px;
+}
+/* line 110, /Users/ignaciopalma/Desktop/my-rails-projects/la_papita_pro/app/assets/stylesheets/mixins.scss */
+body section.end-shifts div.table-wrapper table tbody tr td {
+  text-align: center;
+}
+/* line 115, /Users/ignaciopalma/Desktop/my-rails-projects/la_papita_pro/app/assets/stylesheets/mixins.scss */
+body section.end-shifts div.table-wrapper table tbody tr.par {
+  background: rgba(255, 237, 173, 0.5);
+}
+/* line 119, /Users/ignaciopalma/Desktop/my-rails-projects/la_papita_pro/app/assets/stylesheets/mixins.scss */
+body section.end-shifts div.table-wrapper table tbody tr.impar {
+  background: rgba(255, 237, 173, 0.92);
+}
+/* line 90, /Users/ignaciopalma/Desktop/my-rails-projects/la_papita_pro/app/assets/stylesheets/mixins.scss */
+body section.supplies div.table-wrapper {
+  margin: 0 10%;
+}
+/* line 92, /Users/ignaciopalma/Desktop/my-rails-projects/la_papita_pro/app/assets/stylesheets/mixins.scss */
+body section.supplies div.table-wrapper table {
+  table-layout: fixed;
+  width: 100%;
+  border-spacing: 0;
+}
+/* line 99, /Users/ignaciopalma/Desktop/my-rails-projects/la_papita_pro/app/assets/stylesheets/mixins.scss */
+body section.supplies div.table-wrapper table thead tr {
+  background: rgba(82, 134, 150, 0.92);
+}
+/* line 108, /Users/ignaciopalma/Desktop/my-rails-projects/la_papita_pro/app/assets/stylesheets/mixins.scss */
+body section.supplies div.table-wrapper table tbody tr {
+  height: 35px;
+}
+/* line 110, /Users/ignaciopalma/Desktop/my-rails-projects/la_papita_pro/app/assets/stylesheets/mixins.scss */
+body section.supplies div.table-wrapper table tbody tr td {
+  text-align: center;
+}
+/* line 115, /Users/ignaciopalma/Desktop/my-rails-projects/la_papita_pro/app/assets/stylesheets/mixins.scss */
+body section.supplies div.table-wrapper table tbody tr.par {
+  background: rgba(255, 237, 173, 0.5);
+}
+/* line 119, /Users/ignaciopalma/Desktop/my-rails-projects/la_papita_pro/app/assets/stylesheets/mixins.scss */
+body section.supplies div.table-wrapper table tbody tr.impar {
+  background: rgba(255, 237, 173, 0.92);
+}
+/* line 1, /Users/ignaciopalma/Desktop/my-rails-projects/la_papita_pro/app/assets/stylesheets/end_shifts/new.scss */
+body section.end-shift-new {
+  margin: 0 35%;
+  text-align: center;
+}
+/* line 14, /Users/ignaciopalma/Desktop/my-rails-projects/la_papita_pro/app/assets/stylesheets/end_shifts/new.scss */
+body section.end-shift-new form div.field input {
+  width: 100%;
+  background: rgba(255, 237, 173, 0.92);
+  height: 30px;
+  margin: 15px 0;
+}
+/* line 22, /Users/ignaciopalma/Desktop/my-rails-projects/la_papita_pro/app/assets/stylesheets/end_shifts/new.scss */
+body section.end-shift-new form div.actions {
+  margin: 30px 0;
+}
+/* line 24, /Users/ignaciopalma/Desktop/my-rails-projects/la_papita_pro/app/assets/stylesheets/end_shifts/new.scss */
+body section.end-shift-new form div.actions input[type="submit"] {
+  width: 100%;
+  background: rgba(82, 134, 150, 0.92);
+  border: 0;
+  border-radius: 5px;
+  height: 30px;
+}
+/* line 1, /Users/ignaciopalma/Desktop/my-rails-projects/la_papita_pro/app/assets/stylesheets/pages/home.scss */
+body section.home {
+  text-align: center;
+  margin: 0 35%;
+}
+/* line 5, /Users/ignaciopalma/Desktop/my-rails-projects/la_papita_pro/app/assets/stylesheets/pages/home.scss */
+body section.home div {
+  margin: 20px 0;
+}
+/* line 8, /Users/ignaciopalma/Desktop/my-rails-projects/la_papita_pro/app/assets/stylesheets/pages/home.scss */
+body section.home div a button {
+  width: 100%;
+  background: rgba(82, 134, 150, 0.92);
+  border: 0;
+  border-radius: 5px;
+  height: 30px;
+  color: white;
+  font-size: 1.1em;
+}
+/* line 3, /Users/ignaciopalma/Desktop/my-rails-projects/la_papita_pro/app/assets/stylesheets/header.scss */
+body header nav ul {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 20, /Users/ignaciopalma/.rvm/gems/ruby-2.2.2/gems/neat-1.8.0/app/assets/stylesheets/mixins/_clearfix.scss */
+body header nav ul::after {
+  clear: both;
+  content: "";
+  display: block;
+}
+/* line 5, /Users/ignaciopalma/Desktop/my-rails-projects/la_papita_pro/app/assets/stylesheets/header.scss */
+body header nav ul li {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 14.70196%;
+}
+/* line 89, /Users/ignaciopalma/.rvm/gems/ruby-2.2.2/gems/neat-1.8.0/app/assets/stylesheets/grid/_span-columns.scss */
+body header nav ul li:last-child {
+  margin-right: 0;
+}
+/* line 7, /Users/ignaciopalma/Desktop/my-rails-projects/la_papita_pro/app/assets/stylesheets/header.scss */
+body header nav ul li a {
+  text-decoration: none;
+  background: green;
+  padding: 6px 30px;
+  border-radius: 5px;
+  color: white;
+}

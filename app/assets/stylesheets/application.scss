@@ -21,6 +21,7 @@ $turq: rgba(22, 162, 149, 0.39);
 $light-blue: rgba(82, 134, 150, 0.92);
 $green: rgba(39, 107, 17, 0.92);
 $beige: rgba(255, 237, 173, 0.92);
+$light-beige: rgba(255, 237, 173, 0.5);
 
 body {
 	background-color: $turq;
@@ -29,5 +30,13 @@ body {
 	@import 'orders/show';
 	@import 'orders/index';
 	@import 'products/new';
+	@import 'cashiers/sign_in';
+	@import 'admins/sign_in';
+	@import 'products/index';
+	@import 'categories/index';
+	@import 'end_shifts/index';
+	@import 'supplies/index';
+	@import 'end_shifts/new';
+	@import 'pages/home';
 	@import 'header';
 }

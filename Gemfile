@@ -16,6 +16,7 @@ gem 'responders', '~> 2.0'
 gem 'escpos'
 gem 'escpos-image' 
 gem 'devise'
+gem 'compass'
 
 
 
