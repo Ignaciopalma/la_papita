@@ -1,4 +1,4 @@
-class Cashiers::SessionsController < Devise::SessionsController
+class SessionsController < Devise::SessionsController
 # before_action :configure_sign_in_params, only: [:create]
   before_action :authenticate_admin!
   # GET /resource/sign_in
